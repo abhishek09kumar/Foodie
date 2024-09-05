@@ -10,9 +10,9 @@ const Header =()=>
     const cartItems=useSelector ((store)=>store.cart.items);
     console.log(cartItems);
     return (
-        <div class="flex justify-between bg-black ">  
+        <div class="flex justify-between h-28 bg-black ">  
             <div className="logo-contianer" >
-                <img class="w-64 " src="https://i.ibb.co/RDs5YXP/You-Pick.png"></img>
+                <img class="w-64 h-28" src="https://i.ibb.co/RDs5YXP/You-Pick.png"></img>
             </div>
             <div className='flex item-center'>
                 <ul className="flex p-4 m-6">

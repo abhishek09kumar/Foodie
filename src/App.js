@@ -32,7 +32,7 @@ const RestaurantCard=(props)=>
     const {resData}=props;
     const {name,cloudinaryImageId,avgRating,sla}=resData?.info;
     return ( 
-        <div class="w-60 h-auto m-3 border-2 border-black rounded-lg bg-black  hover:border-orange-500 ">
+        <div class="w-56 h-auto m-3 border-2 border-black rounded-lg bg-black  hover:border-orange-500 ">
           
           <img 
             className="res-logo h-52 w-60 rounded-md"

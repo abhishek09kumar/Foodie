@@ -4,20 +4,21 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { clearCart } from "../utils/cartSlice";
 import { removeItem } from "../utils/cartSlice";
 
-const CartList=(props)=>
+const CartList=({items, onClearCart})=>
 {
 
     const dispatch=useDispatch();
     const handleRemoveItem=(item)=>{
         console.log(item);
-        dispatch(removeItem(item));    
+        dispatch(removeItem({id : item.card.info.id}));    
     }
+
 
     return (
         <div className="min-h-screen bg-black ml-7 w-5/12">
            
-        //<div>{console.log(props)}</div>
-            {props.items.map(item =>(
+         <div>{console.log(items)}</div>
+            {items.map(item =>(
               
             <div key={item.card.info.id} className="my-5 border-b-2 border-orange-400 text-left flex justify-between rounded-md ">
             <div className="w-7/12"> 
@@ -41,7 +42,7 @@ const CartList=(props)=>
 
             ))}
             <div>
-                <button className="border border-orange-400 m-2 rounded-md p-2 text-white flex justify-space">Clear Cart <RiDeleteBin6Line className="m-1 text-orange-400"/></button>
+                <button className="border border-orange-400 m-2 rounded-md p-2 text-white flex justify-space"   onClick={onClearCart}>Clear Cart <RiDeleteBin6Line className="m-1 text-orange-400"/></button>
             </div>
 
         </div>)
@@ -54,18 +55,17 @@ const Cart=()=>{
     const  cartItems=useSelector((store)=> store.cart.items); 
     const dispatch =useDispatch();
     const handleClearCart =()=> {
-       // console.log("yuppp called succesfully");
+        //console.log("yuppp called succesfully");
         dispatch(clearCart());
     };
 
     return (
         <div className="min-h-screen bg-black ">
             <div className="text-white  text-xl ">Your cart have total {cartItems.length} items</div>
-             {console.log(cartItems)}
+            {console.log(cartItems)}
             <h1 className="text-2xl font-bold ">Cart</h1>
-            <div><CartList items={cartItems} />
-            <button onClick={handleClearCart}
-            >Clear cart</button></div>
+            <div><CartList items={cartItems} onClearCart={handleClearCart} />
+            </div>
         </div>
     );
 };

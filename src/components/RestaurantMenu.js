@@ -24,8 +24,9 @@ const RestaurantMenu=()=>
    const categories=resMenu.filter(c=> c.card?.["card"]?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 //console.log(categories);
  
-  
-
+if({avgRating}==0)
+  console.log("i am executing")
+    
 
 const RestaurantCategory=(props)=>{
   // console.log(props)

@@ -21,7 +21,7 @@ useEffect(()=>{
    const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6090126&lng=76.9854526&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
 
    const json=await data.json();
-  
+  console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
    setlistofRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 };
@@ -49,7 +49,7 @@ if(listofRestaurants==0)
     return (<div className="body bg-black">
       <div class="flex mx-1 m-1" > 
         <div className="search  " >
-          <input type="text" className="border  border-black bg-white text-orange-500 " value={serachText}  onChange={(e)=>{
+          <input type="text" className="border  border-black rounded-sm bg-white font-mono text-orange-500 " value={serachText}  onChange={(e)=>{
             setSearchText(e.target.value);
           }}/>
           <button className="m-3 border border-black white rounded w-20 text-white bg-black"
@@ -62,7 +62,7 @@ if(listofRestaurants==0)
           
         <div > <button class=" w-50 h-11 mx-2 text-white" onClick={()=>{
 
-           const list=listofRestaurants.filter((res)=>res.info.rating>4.5);  
+           const list=listofRestaurants.filter((res)=>res.info.avgRating>4.5);  
            console.log(list);
           setFilteredRestaurant(list);  
  
