@@ -24,7 +24,7 @@ Foodie is a modern food ordering web application built with React, Redux, and Ta
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/Foodie.git
+   git clone https://github.com/abhishek09kumar/Foodie.git
    cd Foodie
    ```
 
@@ -80,7 +80,20 @@ package.json
 
 Foodie is designed to provide a seamless food ordering experience. Users can explore a variety of restaurants, view detailed menus, and manage their cart with ease. The application leverages modern React features like lazy loading and hooks, and uses Redux for efficient state management.
 
+## Output
+
+
+<img width="1896" height="860" alt="Screenshot 2025-07-15 164100" src="https://github.com/user-attachments/assets/ad0a94d2-93c4-417c-a544-5ad93678c180" />
+
+<img width="1781" height="866" alt="Screenshot 2025-07-15 164138" src="https://github.com/user-attachments/assets/45e5e81d-fd40-40fe-9268-110ca5fe36fc" />
+
+<img width="1781" height="866" alt="Screenshot 2025-07-15 164138" src="https://github.com/user-attachments/assets/7b7dcef2-4808-4ca1-b79d-1c8cd3393120" />
+
+<img width="1091" height="766" alt="Screenshot 2025-07-15 164315" src="https://github.com/user-attachments/assets/c2207744-2317-4635-ac83-cd8b8b810aff" />
+
+
 ## License
+
 
 This project is licensed under the MIT License.
 
